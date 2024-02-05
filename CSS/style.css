@@ -1,0 +1,250 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Start Navbar */
+
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color) !important;
+}
+
+.navbar .navbar-toggler {
+  border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+
+.navbar .search {
+  border-left: 2px solid var(--green-color);
+}
+
+.navbar .search svg {
+  color: var(--green-color);
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.main-btn:hover {
+  color: var(--dark-color);
+}
+
+/* End Navbar */
+
+/* Start Landing */
+
+.landing {
+  background-color: var(--dark-color);
+  height: calc(100vh - 81px);
+}
+
+/* End Landing */
+
+/* Start Features */
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+}
+
+.features .row .feat .icons {
+  height: 200px;
+}
+
+.features .row .feat .icons svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .row .feat .icons svg.number {
+  color: var(--section-color);
+  font-size: 12rem;
+}
+
+.features .row .feat .icons .icon {
+  color: var(--green-color);
+  font-size: 4rem;
+}
+
+.features .row .feat .text h4 {
+  color: var(--yellow-color);
+}
+
+/* End Features */
+
+/* Start Our Work */
+
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work .container .lists li.active,
+.our-work .container .lists li:not(.main-btn):hover {
+  transition: 0.3s;
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  cursor: pointer;
+}
+
+.our-work .row .box {
+  padding: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.our-work .row .box::after {
+  content: attr(data-work);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #ff3150ab;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  color: var(--yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.3s;
+  transform: translateY(calc(-100% - 6px));
+}
+
+.our-work .row .box:hover::after {
+  transform: translateY(0);
+}
+
+/* End Our Work */
+
+/* Start Stuff */
+
+.stuff .desc {
+  max-width: 500px;
+}
+
+/* End Stuff */
+
+/* Start Team */
+
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow-color);
+}
+
+.team h4 {
+  background-color: var(--green-color);
+}
+
+.team .container .box img {
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.team .container .box img:hover {
+  filter: grayscale(0%);
+}
+
+/* End Team */
+
+/* Start Project */
+
+.project {
+  background-color: var(--dark-color);
+}
+
+/* End Project */
+
+/* Start Subscribe */
+
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+
+.subscribe input[type="text"]:focus::placeholder {
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.subscribe input[type="text"]::placeholder {
+  color: white;
+}
+
+.subscribe a {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+.subscribe a:hover {
+  transition: 0.3s;
+  color: var(--green-color);
+}
+
+/* End Subscribe */
+
+/* Start Footer */
+
+footer {
+  background-color: var(--dark-color);
+}
+
+footer .first-col :nth-child(3) span {
+  color: var(--green-color);
+}
+
+footer .first-col :nth-child(4) span {
+  color: var(--yellow-color);
+}
+
+footer .forth-col .icons .facebook {
+  background-color: #1877f2;
+}
+
+footer .forth-col .icons .twitter {
+  background-color: #1da1f2;
+}
+
+footer .forth-col .icons .linkedin {
+  background-color: #0a66c2;
+}
+
+footer .forth-col .icons .youtube {
+  background-color: #ff0000;
+}
+
+/* End Footer */
